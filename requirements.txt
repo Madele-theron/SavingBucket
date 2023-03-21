@@ -1,0 +1,6 @@
+Babel-2.12.1
+django-money-3.0.0
+py-moneyed-2.0
+typing_extensions-4.5.0
+wheel-0.38.4
+Pillow-9.4.0
