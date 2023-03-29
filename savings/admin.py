@@ -5,4 +5,4 @@ from savings.models import *
 
 admin.site.register(Balance)
 admin.site.register(Deposit)
-admin.site.register(SavingGoal)
+admin.site.register(Goal)
