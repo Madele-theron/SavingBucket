@@ -27,7 +27,7 @@ class Goal(models.Model):
     cost = MoneyField(
         max_digits=10, decimal_places=2, default_currency="ZAR", default=0
     )
-    image = models.ImageField(upload_to="media/goal/", blank=True, null=True)
+    image = models.ImageField(upload_to="savings/media/goal/", blank=True, null=True)
     url_link = models.URLField(blank=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="locked")
     total_saved = models.ForeignKey(Balance, on_delete=models.CASCADE)
