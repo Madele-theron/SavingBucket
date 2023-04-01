@@ -15,6 +15,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+APP_DIR = os.path.join(BASE_DIR, "savings")
 
 IS_HEROKU = "DYNO" in os.environ
 
@@ -71,7 +72,7 @@ ROOT_URLCONF = "savingbuckets.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(APP_DIR, "templates/savings")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

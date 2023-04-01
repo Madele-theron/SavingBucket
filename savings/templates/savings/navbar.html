@@ -1,0 +1,8 @@
+<div>
+    {% url 'savings:home' as home_url %}
+    <span>{% if request.path == home_url %}Landing Page{% else %}<a href="{{home_url}}">Landing Page</a>{% endif %}</span>
+    {% url 'savings:history' as history_url %}
+    <span>{% if request.path == history_url %}History{% else %}<a href="{{history_url}}">History</a>{% endif %}</span>
+    {% url 'savings:contact' as contact_url %}
+    <span>{% if request.path == contact_url %}Contact{% else %}<a href="{{contact_url}}">Contact</a>{% endif %}</span>
+</div>
