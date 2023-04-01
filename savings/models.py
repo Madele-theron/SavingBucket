@@ -36,10 +36,11 @@ class Goal(models.Model):
     def __str__(self):
         return f"{self.name} - {self.cost} - {self.status}"
 
-    # unlocked
+    # goal will unlock when enough money has been saved
     def is_unlocked(self):
         return self.total_saved.amount >= self.cost
-
+    
+    # completed goal will be credited from savings account
     def save(self, *args, **kwargs):
         if self.status == "completed":
             post_save.connect(credit_balance, sender=Goal)

@@ -1,0 +1,69 @@
+<!-- savings/templates/savings/history_list.html -->
+<p>THIS WILL BE THE PAGE THAT LISTS ALL THE COMPLETED GOALS</p>
+<p>this means that I have to copy this page, to make the history page as I'm using this page as the goal overview page. the page will either be called overview of goal_list</p>
+{% extends 'base.html' %} 
+{% block title %}History{% endblock %}
+{% block content %}
+
+<div class="column">
+
+  {% for goal in completedgoals %}
+
+  <div class="block">
+    <div class="card">
+      <a href="xx">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img
+                  src="savings/media/goal/shoes.jpg"
+                  alt="Placeholder image"
+                />
+              </figure>
+            </div>
+            <div class="media-content">
+              {% comment %} this will need to be stored in an image tag {% endcomment %}
+              <p class="title is-4">{{ goal.image }}</p> 
+              <p class="title is-4">{{ goal.name }}</p>
+              <p class="title is-4">{{ goal.date_completed }}</p>
+              <p class="title is-4">{{ goal.cost }}</p>
+              <div class="w3-light-grey">
+                <div id="myBar" class="w3-container w3-green" style="height:24px;width:1%">hello</div>
+              </div>
+              <button class="w3-button w3-green" onclick="move()">Click Me</button> 
+            </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+              {% endfor %}
+            </div>
+            
+          </div>
+        </div></a
+      >
+    </div>
+  </div>
+</div>
+
+<script>
+  function move() {
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width = 100) {
+        clearInterval(id);
+      } else {
+        width++;
+        elem.style.width = width + '%';
+      }
+    }
+  }
+  </script>
+
+
+  {% endblock content %}

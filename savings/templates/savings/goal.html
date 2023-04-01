@@ -1,0 +1,21 @@
+<!-- savings/templates/savings/goal.html -->
+{%extends 'base.html'%} 
+{%block title%} {{goal.name}}{%endblock title%} 
+{%block content%}
+
+<ul>
+  <li>Name: {{ goal.name }}</li>
+  <li>Description: {{ goal.description }}</li>
+  <li>Date Added: {{ goal.date_added }}</li>
+  <li>Cost: {{ goal.cost }}</li>
+  <li>
+    <img
+      src="{{goal.image}}"
+      alt="an image of your {{goal.name}} savings goal"
+    />
+  </li>
+  <li>Link: {{ goal.url_link }}</li>
+  <li>Status: {{ goal.status }}</li>
+  <li>Date Completed: {{ goal.date_completed }}</li>
+</ul>
+{%endblock content%}
