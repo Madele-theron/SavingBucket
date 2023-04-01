@@ -4,4 +4,4 @@ py-moneyed
 typing_extensions
 wheel
 Pillow
-gunicorn-20.1.0
+gunicorn
