@@ -1,0 +1,78 @@
+/* Primary colors */
+primary-colors {
+    color: #DDDCDA; /* light background */
+    color: #1E3706; /* main */
+    color: #FAF9F8; /* grey for higlight */
+}
+
+body {
+    font-family: 'Savingbuckets Font';
+} 
+/* this body is not changing anything */
+
+#main {
+    padding-top: 74px;
+}
+
+@media (min-width: 992px) {
+    #main {
+        padding-top: 104px; 
+    }
+}
+
+@font-face {
+    font-family: "Savingbuckets Font";
+    src: url("fonts/TenorSans-Regular.ttf") format("truetype");
+} 
+
+.bg-secondary {
+    background-color: #DDDCDA;
+}
+
+.navbar-brand {
+    font-family: 'Savingbuckets Font';
+    font-size: larger; /* this does not work - I want to make the text larger*/
+    color: #1E3706 !important;
+}
+
+.font-change {
+    font-family: 'Savingbuckets Font';
+}
+
+.tagline {
+    font-size: smaller;
+    color: #1E3706;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+    background: #DDDCDA;
+  }
+
+/* .navbar-nav .show > .nav-link,
+.navbar-nav .nav-link.active {
+  color: #1E3706;
+} */
+
+#mainNav .navbar-nav li.nav-item a.nav-link {
+    color: #1E3706;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+    color: #FAF9F8;
+    background: #1E3706;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+    color: #1E3706;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: #1E3706;
+    text-decoration: underline;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+    color: #fff;
+    background: #1E3706;
+}
+
