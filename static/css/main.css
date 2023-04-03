@@ -7,7 +7,10 @@ primary-colors {
 
 body {
     font-family: 'Savingbuckets Font';
-} 
+    color: #1E3706;
+    margin-left: 20px;
+    padding-left: 2.6rem;
+}
 /* this body is not changing anything */
 
 #main {
@@ -54,7 +57,7 @@ body {
 }
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     background: #DDDCDA;
-  }
+}
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
     color: #1E3706;
@@ -83,3 +86,23 @@ body {
     display: flexbox;
     align-content: space-around;
 }
+
+.goal_progress_btns {
+    display: flex;
+    flex-direction: row;
+}
+
+#accounts {
+    margin: 10px;
+}
+
+#goals {
+    margin: 10px;
+}
+
+button {
+    margin-left: 10px;
+    align-self: center;
+}
+
+

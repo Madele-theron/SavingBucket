@@ -1,17 +1,48 @@
 {% extends 'base.html' %} 
 {% load static %}
 <title>{% block title %}Home{% endblock %}</title>
+
 {% block content %}
 
 <!-- They will not be able to edit this but there will be a button where they can deposit money into an account.  -->
 <!-- This will be a for loop that loops through all the savings account -->
-<h3>Hellloooo</h3> </h3> 
-<h3>Savings Account Name: Saved amount </h3> 
-<button class=deposit-btn>DEPOSIT MONEY</button>
+<div>
+    <h1 style="display: inline;">ACCOUNTS</h1>
+    <button id="account-btn">➕Add Account</button>
+</div>
+<div id="accounts">
+    {% for account in accounts %}
+    <div>
+        <h5 style="display: inline;">{{ account}}</h5>
+        <button id="deposit-btn">DEPOSIT MONEY</button>
+    </div>
+    {% endfor %}
+</div>
 
-<!-- for loop thatn loops through the  -->
-<h4>SAvings Goal : name - R 00.00</h4>
-<button>EDIT</button>
-<button>DELETE</button>
-<button>BUY</button>
+<div>space please</div>
+<div>
+    <h1 style="display: inline;">SAVINGS GOALS</h1>
+    <button id="goal-btn" >➕Add Savings Goal</button>
+</div>
+<div id="goals">
+    {% for goal in goals %}
+    <div class="">
+        <!-- <img src="{{ goal.image }}" alt="{{ goal.name }}" /> --> 
+        <div > 
+            <h5>{{ goal.name }}: {{ goal.cost }}</h5>
+            <div class="goal_progress_btns">
+                <p style="display: inline;">PROGRESS BAR</p> 
+                <button id="buy-btn">BUY</button>
+                <button id="edit-btn">⚙</button>
+                <button id="delete-btn">🗑️</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
 {% endblock content %}
+
+
