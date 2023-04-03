@@ -78,3 +78,61 @@ If you have any questions or feedback about SavingBuckets, please contact Madel�
 Email: example@gmail.com
 Twitter: @example
 LinkedIn: Madelé
+
+--- 
+# SavingBuckets
+
+SavingBuckets is a simple web application for managing and tracking savings goals.
+
+## About
+
+SavingBuckets was created as a final year project for the software engineering certificate program at ALX Africa. The project was inspired by a personal need to better manage and track savings goals, and to create a simple platform for others to use.
+
+## Features
+
+- Easily add and manage multiple savings goals
+- Set a savings account balance to unlock goals
+- Track progress with a visual progress bar
+- Edit or delete savings goals at any time
+
+## Technologies Used
+
+- Django web framework
+- HTML, CSS, and JavaScript
+- PostgreSQL database
+- Heroku cloud platform
+
+## Getting Started
+
+To run SavingBuckets locally, follow these steps:
+
+1. Clone the repository to your local machine
+2. Install the required dependencies
+3. Create a local PostgreSQL database
+4. Set environment variables for the database and Django secret key
+5. Run migrations to create database tables
+6. Start the development server
+
+## Deployment
+
+SavingBuckets can be deployed to Heroku using the following steps:
+
+1. Create a new Heroku app
+2. Set environment variables for the database and Django secret key
+3. Add the Heroku Postgres add-on to the app
+4. Push the code to the Heroku app repository
+5. Run migrations on the Heroku app
+6. Open the deployed app in a web browser
+
+## Contributing
+
+If you have any feedback or suggestions for SavingBuckets, please feel free to open an issue or submit a pull request on GitHub.
+
+## Contact
+
+If you have any questions or would like to connect with the creator of SavingBuckets, Madelé, you can find her on LinkedIn or Twitter.
+
+## License
+
+SavingBuckets is released under the [MIT License](https://opensource.org/licenses/MIT).
+
