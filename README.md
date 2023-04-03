@@ -46,3 +46,35 @@ Push to the branch: git push origin my-new-feature
 Submit a pull request
 License
 SavingBuckets is licensed under the MIT license. See LICENSE for more details.
+
+--- 
+SavingBuckets
+SavingBuckets is a web application that allows users to easily manage and track their savings goals. Users can create multiple savings accounts and savings goals, and track their progress towards each goal with a visual progress bar.
+
+Installation
+To run SavingBuckets on your local machine, follow these steps:
+
+Clone this repository.
+Install the required dependencies listed in the requirements.txt file.
+Create a local database by running the following command: python manage.py migrate.
+Start the development server with the command: python manage.py runserver.
+Usage
+After installing SavingBuckets, users can easily create and manage their savings accounts and savings goals through the user-friendly interface. They can track their progress towards each goal with a visual progress bar and edit or delete goals as needed.
+
+Contributing
+If you would like to contribute to SavingBuckets, please follow these steps:
+
+Fork this repository.
+Create a new branch for your changes.
+Make your changes and commit them to your branch.
+Push your changes to your fork.
+Submit a pull request to this repository.
+Credits
+SavingBuckets was created by Madelé and designed with simplicity in mind.
+
+Contact
+If you have any questions or feedback about SavingBuckets, please contact Madelé at the following links:
+
+Email: example@gmail.com
+Twitter: @example
+LinkedIn: Madelé
