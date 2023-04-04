@@ -96,8 +96,6 @@ def home(request): # TODO this can be the landing page :) // or just the main ov
     accounts = Balance.objects.all()
     return render(request, "home.html", {"goals": goals, "accounts":accounts})
 
-def overview(request): # TODO this can be taken out. 
-    return render(request, "overview.html")
 
 def history(request):
     completed_goals = Goal.objects.filter(status="completed")
