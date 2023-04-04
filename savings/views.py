@@ -51,17 +51,6 @@ def add_account(request):
             
     return render(request, 'add_account.html', {"form": form, "submitted": submitted})
 
-
-def contact(request):
-    if request.method == 'POST':
-        form = GoalForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return ('contact_success')
-    else:
-        form = GoalForm()
-    return render(request, 'savings_goal.html', {'form': form})
-
 class GoalList(APIView):
         def get(self, request):
             data = Goal.objects.all()
