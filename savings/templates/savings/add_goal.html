@@ -1,0 +1,24 @@
+{% extends 'base.html' %} 
+<title>{% block title %}Add Savings Goal{% endblock %}</title>
+{% block content %}
+
+{% if submitted %}
+    Your savings goal was created succesfully! 🎉
+    <br>
+    Now let's start saving! 💸
+    <br>
+    <a href="{% url 'savings:home' %}" >
+    <button id="home-btn"  >Go back to home</button>
+    </a>
+{% else %}
+    <h3>Create a new savings goal:</h3>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit" >
+    </form>
+{% endif %}
+{% endblock content %}
+
+
+

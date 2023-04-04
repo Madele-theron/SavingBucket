@@ -1,0 +1,25 @@
+{% extends 'base.html' %} 
+<title>{% block title %}Deposit Money{% endblock %}</title>
+{% block content %}
+
+{% if submitted %}
+    Deposit succesful! 🎉
+    <br>
+    You're one step closer towards your goal!! 💸
+    <br>
+    <a href="{% url 'savings:home' %}" >
+    <button id="home-btn"  >Go back to home</button>
+    </a>
+{% else %}
+    <h3>Deposit money into savings account:</h3>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit" >
+    </form>
+{% endif %}
+
+{% endblock content %}
+
+
+
