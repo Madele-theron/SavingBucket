@@ -37,7 +37,7 @@
         <div class="d-flex flex-column"> 
             <div class="d-flex flex-row">
                 <div>
-                    <img src="{{ goal.image }}" onerror="this.onerror=null; this.src='Default.jpg'" alt="{{ goal.name }}" />
+                    {% comment %} <img src="{{ goal.image }}" onerror="this.onerror=null; this.src='Default.jpg'" alt="{{ goal.name }}" /> {% endcomment %}
                 </div>
                 <h5>{{ goal.name }}: {{ goal.cost }} </h5>
                 <div class="goal_progress_btns">    
