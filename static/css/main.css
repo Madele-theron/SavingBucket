@@ -123,7 +123,7 @@ h1 {
 }
 
 .contact_body {
-    background-image: url("/static/theme/assets/money-transp.png"); 
+    /* background-image: url("/static/theme/assets/money-transp.png");  */
     font-size: 2rem;
     font-weight: bolder;
     }
