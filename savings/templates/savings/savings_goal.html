@@ -1,5 +1,25 @@
 {% extends 'base.html' %} 
 <title>{% block title %}Savings Goal{% endblock %}</title>
 {% block content %}
-<h1>Savings Goal Details</h1>
+<h1 class="font-change">Savings Goal: {{ goal.name }}</h1>
+
+<p>Name Goal: {{ goal.name }}</p>
+<p>Description: {{ goal.description }}</p>
+<p>Date Added: {{ goal.date_added }}</p>
+<p>Link: {{ goal.url_link }}</p> 
+<p>Status: {{ goal.status }}</p> <!-- cannot be edited, when they press the buy button it will change this value to completed -->
+<p>Account: {{ goal.account }}</p> <!-- drop down list -->
+<p>Date Completed: {{ goal.date_completed }}</p>
+
+
+
+<form action="{% url 'editGoal' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+
 {% endblock content %}
+
+
+
