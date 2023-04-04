@@ -1,13 +1,36 @@
 {% extends 'base.html' %} 
+{% load static %}
+
 <title>{% block title %}Contact Us{% endblock %}</title>
 {% block content %}
-<h1>Contact Us</h1>
-<h5>Hello, I'm Madelé - creator and designer of SavingBuckets.
-    If you have any feedback or ideas on how we can improve SavingBuckets, I'd love to hear from you.
-    Feel free to connect with me via any of the icons below.
-</h5>
-<p>Github</p>
-<p>linkedin</p>
-<p>email</p>
-<p>twitter</p>
+<div class="contact_body">
+    <div class="contact-box">
+        <div>
+            <img src="{% static 'theme/assets/img/madele.jpg' %}" class="img-me" >
+        </div>
+        <div>
+            <br>
+            <h5>Hello 👋   I'm Madelé - creator and designer of SavingBuckets.
+            <br>
+            <br>
+            I hope you've enjoyed using SavingBuckets and found it valuable. 
+            <br>
+            If you have any feedback or ideas on how I can make it even better, I'd love to hear from you. 
+            <br>
+            <br>
+            Please feel free to connect with me using any of the links below. 
+            <br>
+            <br>
+            <br>
+            <div>
+                <a href="https://www.linkedin.com/in/madele-theron/" target="_blank"> <img src="{% static 'theme/assets/icons/linkedin.png' %}" class="img-icons"></a>
+                <a href="https://github.com/Madele-theron" target="_blank"> <img src="{% static 'theme/assets/icons/github.png' %}" class="img-icons"></a>
+                <a href="mailto:madele.theron@gmail.com" target="_blank"> <img src="{% static 'theme/assets/icons/email.png' %}" class="img-icons"></a>
+            </div>
+            </h5>
+        </div>
+        
+    </div>
+</div>
 {% endblock content %}
+

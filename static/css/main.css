@@ -29,7 +29,7 @@ body {
 } 
 
 .bg-secondary {
-    background-color: #E9E9E9;
+    background-color: #E9E9E9 !important;
 }
 
 .navbar-brand {
@@ -105,4 +105,26 @@ button {
     align-self: center;
 }
 
+h5 {
+    font-weight: bold;
+}
 
+.img-icons {
+    width:  50px;
+    height: 50px;
+}
+
+.contact_body {
+    background-image: url("/static/theme/assets/money-transp.png"); 
+    }
+
+.img-me {
+    width: auto;
+    height: 300px;
+    margin-right: 10px;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: row;
+}
