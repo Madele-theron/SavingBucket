@@ -199,3 +199,11 @@ ul.tl li .timestamp{
 .history-h1 {
     margin-left: 20px !important;
 }
+
+.btn-secondary {
+    background-color: #1E3706 !important;
+}
+
+.btn-success {
+    background-color: greenyellow !important;
+}
