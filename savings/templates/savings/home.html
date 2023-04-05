@@ -7,11 +7,11 @@
 {% comment %} SAVINGS ACCOUNTS {% endcomment %}
 <div>
     <h1 style="display: inline">ACCOUNTS</h1>
-    <a href="{% url 'savings:add-account' %}" target="_blank">
-        <button id="account-btn" style="vertical-align: middle;">➕Add</button>
+    <a href="{% url 'savings:add-account' %}" >
+        <button id="account-btn" style="vertical-align: middle;">➕</button>
     </a>
-    <a href="{% url 'savings:deposit' %}" target="_blank">
-        <button id="deposit-btn">➕ Deposit</button>
+    <a href="{% url 'savings:deposit' %}" >
+        <button id="deposit-btn">Deposit</button>
     </a>
 </div>
 
@@ -22,7 +22,8 @@
                 <h5 style="display: inline;">{{ account}}</h5>
             </td>
             <td>
-                <a href="{% url 'savings:delete-account' account.id %}" > <button id="delete-btn" class="btn-danger">🗑️</button></a>
+                <a href="{% url 'savings:delete-account' account.id %}" > <button id="delete-btn"  onclick="return confirm('Are you sure you want to delete this account?') ? window.location.href='{% url 'savings:home' %}' : false;">Delete</button></a>
+
             </td>
         </tr>
     {% endfor %}
@@ -32,7 +33,7 @@
 {% comment %} SAVINGS GOALS {% endcomment %}
 <div>
     <h1 style="display: inline;">SAVINGS GOALS</h1>
-    <a href="{% url 'savings:add-goal' %}" target="_blank">
+    <a href="{% url 'savings:add-goal' %}" >
     <button id="goal-btn" >➕Add</button></a>
 
 </div>
@@ -49,7 +50,8 @@
                     <div class="goal_progress_btns">    
                         <a href="{% url 'savings:complete-goal' goal.id %}" ><button id="buy-btn">BUY</button></a>
                         <a href="{% url 'savings:update-goal' goal.id %}"><button id="edit-btn">⚙</button></a>
-                        <a href="{% url 'savings:delete-goal' goal.id %}"> <button id="delete-btn" class="btn-danger">🗑️</button></a>
+                        <a href="{% url 'savings:delete-goal' goal.id %}"> <button id="delete-btn"  onclick="return confirm('Are you sure you want to delete this savings goal?') ? window.location.href='{% url 'savings:home' %}' : false;">Delete</button></a>
+
                     </div>
                 </td>
             </tr>
