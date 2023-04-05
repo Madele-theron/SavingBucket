@@ -5,7 +5,9 @@
 <h3>Create a new savings account:</h3>
 
 {% if submitted %}
+<div style="text-align: centre;">
     Savings account created succesfully! 🎉
+</div>
     <br>
     <a href="{% url 'savings:deposit' %}" >
     <button id="home-btn"  >Deposit money</button>
@@ -15,11 +17,11 @@
     <button id="home-btn"  >Go back to home</button>
     </a>
 {% else %}
-    <form action="" method="post">
+    <form action="" method="post" style="max-width: 500px;">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Create" class="btn btn-secondary">
         <a href="{% url 'savings:home' %}"><input type="button" value="Back" class="btn btn-secondary"></a>
+        <input type="submit" value="Create" class="btn btn-secondary" >
     </form>
 {% endif %}
 

@@ -12,11 +12,11 @@
     </a>
 {% else %}
     <h3>Deposit money into savings account:</h3>
-    <form action="" method="post">
+    <form action="" method="post" style="max-width: 500px;">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Deposit" class="btn btn-secondary">
         <a href="{% url 'savings:home' %}"><input type="button" value="Back" class="btn btn-secondary"></a>
+        <input type="submit" value="Deposit" class="btn btn-secondary">
     </form>
 {% endif %}
 

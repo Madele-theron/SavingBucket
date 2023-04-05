@@ -12,14 +12,15 @@
     </a>
 {% else %}
     <h3>Create a new savings goal:</h3>
-    <form action="" method="post">
+    <form action="" method="post" style="max-width: 500px;">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Create" class="btn btn-secondary">
         <a href="{% url 'savings:home' %}"><input type="button" value="Back" class="btn btn-secondary"></a>
+        <input type="submit" value="Create" class="btn btn-secondary" >
     </form>
 {% endif %}
 {% endblock content %}
 
 
+<input type="button" value="Back" class="btn btn-secondary" onclick="return confirm('Are you sure you want to go back?') ? window.location.href='{% url 'savings:home' %}' : false;">
 
