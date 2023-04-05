@@ -4,9 +4,31 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.http import HttpResponseRedirect
 from .forms import GoalForm, AccountForm, DepositForm
+import datetime
 
+# buy / "complete" a savings goal
+def complete_goal(request, goal_id):
+    goal = Goal.objects.get(id=goal_id)
+    goal.status = "completed"
+    goal.date_completed = datetime.date.today()
+    goal.save()
+    
+    return redirect('savings:history')
 
-# Create your views here.
+# delete savings account
+def delete_account(request, account_id):
+    account = Balance.objects.get(id=account_id)
+    account.delete()
+    
+    return redirect('savings:home')
+
+# delete savings goal
+def delete_goal(request, goal_id):
+    goal = Goal.objects.get(id=goal_id)
+    goal.delete()
+    
+    return redirect('savings:home')
+    
 def update_goal(request, goal_id):
     goal = Goal.objects.get(id=goal_id)
     form = GoalForm(request.POST or None, instance=goal)
