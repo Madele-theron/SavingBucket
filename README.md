@@ -8,7 +8,7 @@ SavingBuckets is a web application that helps users keep track of their savings 
 
 SavingBuckets was created as a final year project for the software engineering certificate program at ALX Africa. The project was inspired by a personal need to better manage and track savings goals, and to create a simple platform for myself and others to use.
 - [Deployed Site](https://savingbuckets.herokuapp.com/)
-- [Blog Article]()
+- [Blog Article](https://madelethedev.hashnode.dev/introducing-savingbuckets)
 - [Linkedin](https://www.linkedin.com/in/madele-theron/)
 
 # Inspiration
@@ -37,6 +37,9 @@ To update or delete a goal, simply click on the "Edit" or "Delete" buttons next 
 - [x] Set a savings account balance to unlock goals
 - [x] Edit or delete savings goals at any time
 - [ ] Track progress with a visual progress bar
+
+# Features in the works
+- [ ] Timeline of deposits for each savings account
 
 # What is next? ⚡️
 As I continue to develop SavingBuckets, I'm constantly looking for ways to improve the user experience and make the site more engaging. Here are some of the improvements I am working on:
@@ -80,6 +83,9 @@ We welcome contributions from the community. If you have any ideas or suggestion
 
 I don't know of any related projects, and I also don't have any related projects myself.
 
+# Resources 📑
+- [Add accounts, goals and deposits](https://www.youtube.com/watch?v=CVEKe39VFu8&ab_channel=Codemy.com)
+- [Update & Edit saving goals](https://www.youtube.com/watch?v=jCM-m_3Ysqk&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy&index=11&ab_channel=Codemy.com)
 
 # Contact ☎️
 
