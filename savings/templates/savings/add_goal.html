@@ -15,7 +15,8 @@
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Submit" >
+        <input type="submit" value="Create" class="btn btn-secondary">
+        <a href="{% url 'savings:home' %}"><input type="button" value="Back" class="btn btn-secondary"></a>
     </form>
 {% endif %}
 {% endblock content %}
