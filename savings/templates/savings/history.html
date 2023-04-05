@@ -2,23 +2,24 @@
 <title>{% block title %}History{% endblock %}</title>
 {% block content %}
 
-<h1>History</h1>
+<h1 class="history-h1">History</h1>
 
 <!-- fix the line and li button so they are alligned -->
 
-
-<div class="history-tl-container">
-    <ul class="tl">
-        {% for goal in completed_goals %}
-        <li class="tl-item" ng-repeat="item in retailer_history">
-            <div class="timestamp">
-                {{ goal.date_completed}}
-            </div>
-            <div class="item-title">{{goal.name}}</div>
-            <div class="item-detail">{{goal.cost}}</div>
-        </li>
-        {% endfor %}
-    </ul>
+<div>
+    <div class="history-tl-container">
+        <ul class="tl">
+            {% for goal in completed_goals %}
+            <li class="tl-item" ng-repeat="item in retailer_history">
+                <div class="timestamp">
+                    {{ goal.date_completed}}
+                </div>
+                <div class="item-title">{{goal.name}}</div>
+                <div class="item-detail">{{goal.cost}}</div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 
 

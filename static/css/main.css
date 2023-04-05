@@ -146,6 +146,7 @@ h1 {
     margin:auto;
     display:block;
     position:relative;
+    margin: 0px 130px !important;
 }
 .history-tl-container ul.tl{
     margin:10px 0;
@@ -193,4 +194,8 @@ ul.tl li .timestamp{
     left: -60%;
     text-align: left;
     font-size: 12px;
+}
+
+.history-h1 {
+    margin-left: 20px !important;
 }
