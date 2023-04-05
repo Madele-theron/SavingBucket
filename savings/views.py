@@ -1,5 +1,5 @@
 from .models import *
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.http import HttpResponseRedirect
@@ -7,6 +7,13 @@ from .forms import GoalForm, AccountForm, DepositForm
 
 
 # Create your views here.
+def update_goal(request, goal_id):
+    goal = Goal.objects.get(id=goal_id)
+    form = GoalForm(request.POST or None, instance=goal)
+    if form.is_valid():
+        form.save()
+        return redirect('savings:home')
+    return render(request, "update_goal.html", {"goal": goal, "form": form})
 
 def deposit(request):
     submitted = False
@@ -48,47 +55,7 @@ def add_account(request):
         if 'submitted' in request.GET:
             submitted = True
             
-    return render(request, 'add_account.html', {"form": form, "submitted": submitted})
-
-class GoalList(APIView):
-        def get(self, request):
-            data = Goal.objects.all()
-            return Response(
-                GoalSerializer(
-                    data, context={"request": request}, many=True).data
-            )
-
-        def post(self, request):
-            serializer = GoalSerializer(data=request.data)
-            data = serializer
-            goal = Goal.objects.create(
-                name=data["name"],
-                description=["description"],
-                date_added=data["date_added"],
-                cost=data["cost"],
-                image=data["image"],
-                url_link=data["url_link"],
-                status=data["status"],
-                account=data["account"],
-                date_completed=data["date_completed"],
-            )
-
-class BalanceList(APIView):
-    def get(self, request):
-            data = Balance.objects.all()
-            return Response(
-                BalanceSerializer(
-                    data, context={"request": request}, many=True).data
-            )
-
-    def post(self, request):
-        serializer = BalanceSerializer(data=request.data)
-        data = serializer
-        balance = Balance.objects.create(
-            name=data["name"],
-            amount=["amount"],
-        )
-    
+    return render(request, 'add_account.html', {"form": form, "submitted": submitted})    
     
 def home(request): # TODO this can be the landing page :) // or just the main over view page??
     goals = Goal.objects.all()
