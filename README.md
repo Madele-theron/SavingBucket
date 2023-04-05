@@ -1,8 +1,8 @@
 # SavingBuckets
 
-SavingBuckets is a simple web application for managing and tracking savings goals.
+### SavingBuckets is a simple web application for managing and tracking savings goals.
 
-## Introduction
+# Introduction
 
 SavingBuckets is a web application that helps users keep track of their savings goals and progress towards achieving them. With SavingBuckets, users can create multiple savings goals, set target amounts, and track their progress through a visual progress bar. The app also provides an overview of all savings goals and the option to edit or delete them.
 
