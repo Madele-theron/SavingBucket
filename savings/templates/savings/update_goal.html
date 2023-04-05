@@ -9,8 +9,8 @@
     {% csrf_token %}
     {{ form.as_p }}
     <br>
-        <input type="submit" value="Update" class="btn btn-secondary">
-        <a href="{% url 'savings:home' %}"><input type="button" value="Back" class="btn btn-secondary"></a>
+    <a href="{% url 'savings:home' %}"><input type="button" value="Back" class="btn btn-secondary"></a>
+    <input type="submit" value="Update" class="btn btn-secondary">
 
 
 {% endblock content %}
