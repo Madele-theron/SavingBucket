@@ -1,7 +1,5 @@
 from .models import *
 from django.shortcuts import render, redirect
-from rest_framework.response import Response
-from rest_framework.views import APIView
 from django.http import HttpResponseRedirect
 from .forms import GoalForm, AccountForm, DepositForm
 import datetime
