@@ -5,8 +5,8 @@
 {% block content %}
 
 {% comment %} SAVINGS ACCOUNTS {% endcomment %}
-<div style="d-flex flex-column">
-    <h1 style="d-flex flex-column" style="display: inline;">ACCOUNTS</h1>
+<div>
+    <h1 style="display: inline">ACCOUNTS</h1>
     <a href="{% url 'savings:add-account' %}" target="_blank">
         <button id="account-btn" style="vertical-align: middle;">➕Add</button>
     </a>
@@ -15,41 +15,45 @@
     </a>
 </div>
 
-<div id="accounts">
+<table id="accounts">
     {% for account in accounts %}
-        <div>
-            <li>
+        <tr>
+            <td>
                 <h5 style="display: inline;">{{ account}}</h5>
-                <button id="delete-btn" >🗑️</button>
-            </li>
-        </div>
+            </td>
+            <td>
+                <a href="{% url 'savings:delete-account' account.id %}" > <button id="delete-btn" class="btn-danger">🗑️</button></a>
+            </td>
+        </tr>
     {% endfor %}
-</div>
+    </table>
+
 <br/><br/>
 {% comment %} SAVINGS GOALS {% endcomment %}
 <div>
     <h1 style="display: inline;">SAVINGS GOALS</h1>
     <a href="{% url 'savings:add-goal' %}" target="_blank">
-    <button id="goal-btn" >➕Add</button>
-    </a>
+    <button id="goal-btn" >➕Add</button></a>
 
 </div>
 <table id="goals">
     {% for goal in goals %}
-    <tr>
-        <td class="d-flex flex-column"> 
-            <div class="d-flex flex-row">
-                <h5>{{ goal.name }}: {{ goal.cost }} </h5>
-            </div>
-        </td>
-        <td>
-            <div class="goal_progress_btns">    
-                <button id="buy-btn">BUY</button>
-                <a href="{% url 'savings:update-goal' goal.id %}" ><button id="edit-btn">⚙</button></a>
-                <button id="delete-btn">🗑️</button>
-            </div>
-        </td>
-    </tr>
+        {% if goal.status != 'completed' %}
+            <tr>
+                <td class="d-flex flex-column"> 
+                    <div class="d-flex flex-row">
+                        <h5>{{ goal.name }}: {{ goal.cost }} </h5>
+                    </div>
+                </td>
+                <td>
+                    <div class="goal_progress_btns">    
+                        <a href="{% url 'savings:complete-goal' goal.id %}" ><button id="buy-btn">BUY</button></a>
+                        <a href="{% url 'savings:update-goal' goal.id %}"><button id="edit-btn">⚙</button></a>
+                        <a href="{% url 'savings:delete-goal' goal.id %}"> <button id="delete-btn" class="btn-danger">🗑️</button></a>
+                    </div>
+                </td>
+            </tr>
+        {% endif %}
     {% endfor %}
 </table>
 
