@@ -2,7 +2,7 @@
 <title>{% block title %}Add Savings Account{% endblock %}</title>
 {% block content %}
 
-<h3>Create a new savings account:</h3>
+
 
 {% if submitted %}
 <div style="text-align: centre;">
@@ -17,6 +17,7 @@
     <button id="home-btn" class="btn btn-secondary" >Go back to home</button>
     </a>
 {% else %}
+    <h3>Create a new savings account:</h3>
     <form action="" method="post" style="max-width: 500px;">
         {% csrf_token %}
         {{ form.as_p }}
