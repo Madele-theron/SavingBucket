@@ -7,7 +7,7 @@
 <!-- fix the line and li button so they are alligned -->
 
 
-    <div class="history-container" >
+<div class="history-container" >
 
             {% for goal in completed_goals %}
             <div class="history-item">
@@ -16,15 +16,14 @@
                 </div>
                 <div class="dots">
                     <span class="dot"></span>
-                    <span class="dot-sm"></span>
+                    {% comment %} <span class="dot-sm"></span> {% endcomment %}
                 </div>
                 <div class="item-title">{{goal.name}}</div>
                 <div class="item-detail">{{goal.cost}}</div>
             </div>
             {% endfor %}
 
-    </div>
-
+</div>
 
 
 <a href="{% url 'savings:home' %}" ><input type="button" value="Back" class="btn btn-secondary" style="margin-left: 70p !important;"></a>
@@ -34,10 +33,3 @@
 {% comment %} https://codepen.io/pranjal-goswami/pen/RNdpOP {% endcomment %}
 
 
-{% comment %} <li class="tl-item" ng-repeat="item in retailer_history">
-    <div class="timestamp">
-        {{ goal.date_completed}}
-    </div>
-    <div class="item-title">{{goal.name}}</div>
-    <div class="item-detail">{{goal.cost}}</div>
-</li> {% endcomment %}
