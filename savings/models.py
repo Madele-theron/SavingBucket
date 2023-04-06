@@ -36,10 +36,11 @@ class Goal(models.Model):
     def __str__(self):
         return f"{self.name} - {self.cost} - {self.status}"
 
-
+    # formula to work out if goal is unlocked
     def is_unlocked(self):
         return self.account.amount >= self.cost
 
+    # Once goal has been completed the cost will be subtracted from the savings account
     def save(self, *args, **kwargs):
         if self.is_unlocked():
             self.status = "unlocked"
