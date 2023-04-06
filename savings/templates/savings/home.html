@@ -8,10 +8,11 @@
 <div style="display:flex">
     <div style="width:50%">
         <table id="goals-table">
+
             <div class="goal-progress-btns">
                 <h1 style="display: inline;">Saving Goals</h1>
                 <a href="{% url 'savings:add-goal' %}" >
-                <button id="goal-btn" class="btn btn-secondary" >➕</button></a>
+                    <button id="goal-btn" class="btn btn-secondary" style="margin-left: 20px;">➕</button></a>
             </div>
 
             <table id="goals">
@@ -20,20 +21,19 @@
                         {% if goal.status != 'completed' %}
                             <tr>
                                 <td class="d-flex flex-column"> 
-                                    <div class="d-flex flex-row">
-                                        <h5 style="margin-top: 15px;">{{ goal.name }}: {{ goal.cost }}</h5>
-                                    </div>
+                                    <h5 style="margin-top: 15px;">{{ goal.name }}:</h5>
+                                </td>
+                                <td>
+                                    <h5 style="margin-top: 15px;">{{ goal.cost }}</h5>
                                 </td>
                                 <td>
                                     <div class="goal-progress-btns">  
                                         <!-- BUY btn  -->
-                                    
                                         <button id="buy-btn" class="btn btn-secondary buy-btn {% if goal.account.amount >= goal.cost %} btn-success{% else %} disabled{% endif %}" 
                                             {% if goal.account.amount < goal.cost %} disabled="disabled" value="Insufficient Funds" {% endif %}
                                             onclick="if (confirm('Are you sure you want to complete this goal?')) { window.location.href = '{% url 'savings:complete-goal' goal.id %}'; }" >
                                             {% if goal.account.amount < goal.cost %} 🔒🔒 {% else %} BUY {% endif %}
-                                    </button>
-                                    
+                                        </button>
                                         <!-- EDIT btn  -->
                                         <a href="{% url 'savings:update-goal' goal.id %}">
                                             <button id="edit-btn" class="btn btn-secondary" >⚙</button>
@@ -58,7 +58,7 @@
         <div class="goal-progress-btns">
             <h1 style="display: inline">Accounts</h1>
             <a href="{% url 'savings:add-account' %}">
-                <button id="account-btn" style="vertical-align: middle;" class="btn btn-secondary">➕</button>
+                <button id="account-btn" style="vertical-align: middle; margin-left: 20px;" class="btn btn-secondary">➕</button>
             </a>
             <a href="{% url 'savings:deposit' %}">
                 <button id="deposit-btn" class="btn btn-secondary">Deposit</button>
