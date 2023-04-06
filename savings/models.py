@@ -2,7 +2,7 @@ from django.db import models
 from djmoney.models.fields import MoneyField, CurrencyField
 import datetime
 from django.dispatch import receiver
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, pre_save
 
 
 class Balance(models.Model):
@@ -42,10 +42,10 @@ class Goal(models.Model):
 
     # Once goal has been completed the cost will be subtracted from the savings account
     def save(self, *args, **kwargs):
-        if self.is_unlocked():
+        if self.status == "completed":
+            pass
+        elif self.is_unlocked():
             self.status = "unlocked"
-        elif self.status == "completed":
-            post_save.connect(credit_balance, sender=Goal)           
         super().save(*args, **kwargs)
 
 
@@ -62,7 +62,6 @@ class Deposit(models.Model):
 
 # Signals / Triggers / Logic
 
-
 # Add deposit to balance
 @receiver(post_save, sender=Deposit)
 def debit_balance(sender, instance, **kwargs):
@@ -70,9 +69,12 @@ def debit_balance(sender, instance, **kwargs):
     balance.amount += instance.amount
     balance.save()
 
-
+        
 # Credit balance when goal is completed
+@receiver(post_save, sender=Goal)
 def credit_balance(sender, instance, **kwargs):
-    balance = instance.account
-    balance.amount -= instance.cost
-    balance.save()
+    if instance.status == "completed":
+        print("this works")
+        balance = instance.account
+        balance.amount -= instance.cost
+        balance.save()
