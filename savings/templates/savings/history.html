@@ -4,19 +4,15 @@
 
 <h1 class="history-h1">History</h1>
 
-<!-- fix the line and li button so they are alligned -->
-
-
 <div class="history-container" >
 
-            {% for goal in completed_goals %}
+            {% for goal in completed_goals reversed %}
             <div class="history-item">
                 <div class="timestamp">
                     {{ goal.date_completed}}
                 </div>
                 <div class="dots">
                     <span class="dot"></span>
-                    {% comment %} <span class="dot-sm"></span> {% endcomment %}
                 </div>
                 <div class="item-title">{{goal.name}}</div>
                 <div class="item-detail">{{goal.cost}}</div>
@@ -30,6 +26,7 @@
 
 {% endblock content %}
 
+{% comment %} Resource/Inspo for the timeline {% endcomment %}
 {% comment %} https://codepen.io/pranjal-goswami/pen/RNdpOP {% endcomment %}
 
 
