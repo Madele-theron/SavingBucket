@@ -48,7 +48,6 @@ body {
 .tagline {
     font-size: smaller;
     color: #1E3706;
-    /* margin-top: 0rem; */
 }
 
 #mainNav {
@@ -103,7 +102,6 @@ body {
 button {
     margin: 5px;
     align-self: center;
-    /* margin-bottom: 20px; */
     vertical-align: middle;
 }
 
@@ -123,7 +121,6 @@ h1 {
 }
 
 .contact_body {
-    /* background-image: url("/static/theme/assets/money-transp.png");  */
     font-size: 2rem;
     font-weight: bolder;
     }
@@ -141,69 +138,17 @@ h1 {
 
 /* timeline */
 
-/* .history-container{
-    display: flex;
-    flex-direction: column-reverse;
-    margin:auto;
-    position:relative;
-    margin: 0px 10px !important;
-}
-
-.history-item {
-    display: flex;
-
-}
-
-.timestamp {
-    width: 200px;
-    text-align: right;
-} */
-
-/* .item-title {
-    margin-left: 110px;
-}
-
-.item-detail {
-    margin-left: 110px;
-}
-
-.dots {
-    height: 20px;
-    width: 20px;
-    display: inline;
-    background-color: red;
-} */
-
-/* .dot {
-    height: 20px;
-    width: 20px;
-    background-color: #6D7C60;
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute;
-}
-
-.dot-sm {
-    height: 6px;
-    width: 6px;
-    background-color: #1E3706;
-    border-radius: 50%;
-    display: inline-block; 
-    position: absolute;
-    align-content: center;
-} */
-
 .history-container {
     position: relative;
     margin: 30px 0;
     padding-left: 90px; 
 }
+
 /* for each goal in goal_completed */
 .history-item {
     position: relative;
     padding-bottom: 20px;
     margin-left: 60px;
-    /* background-color: red; */
     border-left: 2px dashed #1E3706;
 }
 .timestamp {
@@ -266,11 +211,22 @@ h1 {
 .btn-success {
     background-color: #1E3706 !important;
     color: #E9E9E9;
+    border: none;
 }
 
 
 .btn-success:hover {
-    box-shadow: 0 0 0 0.25rem #A1CCB6;
+    box-shadow: 0 0 0 0.10rem #7faf96;
+}
+
+.btn-secondary:active {
+    box-shadow: 0 0 0 0.25rem #7faf96 !important;
+    background-color: #6D7C60;
+}
+
+.btn-secondary:active {
+    box-shadow: 0 0 0 0.25rem #7faf96 !important;
+    background-color: #1E3706 !important ; 
 }
 
 #locked-btn {
@@ -291,3 +247,6 @@ h1 {
     vertical-align: top;
 }
 
+td {
+    padding: 0 20px;
+}
