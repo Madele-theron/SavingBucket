@@ -24,7 +24,7 @@ My goal was to create a system that would notify me when I had enough funds to m
 
 # Screenshots 📸
 
-![ScreenShot](/static/theme/assets/screenshots/overview.png)
+![ScreenShot](/static/theme/assets/screenshots/overview.jpeg)
 ![ScreenShot](/static/theme/assets/screenshots/history.png)
 # Usage
 Once the site is up and running, you can create new savings accounts and savings goals. Fill in the details of your new savings account and savings goal, and click "Save". You will then be redirected to the overview page where you can see a list of all your savings accounts and saving goals, including the new ones you created.
