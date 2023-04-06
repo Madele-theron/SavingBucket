@@ -77,13 +77,14 @@ def add_account(request):
             
     return render(request, 'add_account.html', {"form": form, "submitted": submitted})    
     
-def home(request): # TODO this can be the landing page :) // or just the main over view page??
+def home(request): 
     goals = Goal.objects.all()
     accounts = Balance.objects.all()
     return render(request, "home.html", {"goals": goals, "accounts":accounts})
 
+# history timeline of completed goals ordered by date (descending order)
 def history(request):
-    completed_goals = Goal.objects.filter(status="completed")
+    completed_goals = Goal.objects.filter(status="completed").order_by('-date_completed')
     return render(request, "history.html", {"completed_goals": completed_goals})
 
 def contact(request):
