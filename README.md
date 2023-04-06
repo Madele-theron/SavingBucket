@@ -43,6 +43,7 @@ To update or delete a goal, simply click on the "Edit" or "Delete" buttons next 
 - [ ] Timeline of deposits for each savings account
 - [ ] Login / Sign up pages
 - [ ] Display images of goals on website
+- [ ] Responsive website that works on mobile as well
 
 # What is next? ⚡️
 As I continue to develop SavingBuckets, I'm constantly looking for ways to improve the user experience and make the site more engaging. Here are some of the improvements I am working on:
