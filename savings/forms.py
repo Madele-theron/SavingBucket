@@ -54,27 +54,27 @@ class AccountForm(ModelForm):
 # Deposit money into savings account
 class DepositForm(ModelForm):
     account = forms.ModelChoiceField(queryset=Balance.objects.all(), widget=forms.Select(attrs={'class': 'form-control'}))
-    date_added = forms.DateField(widget=forms.DateInput(attrs={
-        'class': 'form-control',
-        'placeholder': 'Date Added',
-        'type': 'date',  # add this attribute to show a date picker widget
-    }))
+    # date_added = forms.DateField(widget=forms.DateInput(attrs={
+    #     'class': 'form-control',
+    #     'placeholder': 'Date Added',
+    #     'type': 'date',  # add this attribute to show a date picker widget
+    # }))
     
     class Meta:
         model  = Deposit
         fields = (
             "amount",
-            "date_added",
+            # "date_added",
             "account",
         )
         
         labels = {
             "name": "",
-            "date_added": "",
+            # "date_added": "",
             "account": "",
         }
         widgets = {
             "name": forms.TextInput(attrs={'class': 'form-control', 'placeholder': "Savings Account Name*"}),
-            "date_added": forms.DateInput(attrs={'class': 'form-control', 'placeholder': "Date Added"}),
+            # "date_added": forms.DateInput(attrs={'class': 'form-control', 'placeholder': "Date Added"}),
             # "amount": forms.TextInput(attrs={'class': 'form-control', 'placeholder': "Amount"}),
         }
