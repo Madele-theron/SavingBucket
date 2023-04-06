@@ -31,7 +31,7 @@
                                         <!-- BUY btn  -->
                                         <button id="buy-btn" class="btn btn-secondary buy-btn {% if goal.account.amount >= goal.cost %} btn-success{% else %} disabled{% endif %}" 
                                             {% if goal.account.amount < goal.cost %} disabled="disabled" value="Insufficient Funds" {% endif %}
-                                            onclick="if (confirm('Are you sure you want to complete this goal?')) { window.location.href = '{% url 'savings:complete-goal' goal.id %}'; }" >
+                                            onclick="if (confirm('Are you sure you want to COMPLETE this goal?')) { window.location.href = '{% url 'savings:complete-goal' goal.id %}'; }" >
                                             {% if goal.account.amount < goal.cost %} 🔒🔒 {% else %} BUY {% endif %}
                                         </button>
                                         <!-- EDIT btn  -->
@@ -40,7 +40,7 @@
                                         </a>
                                         <!-- DELETE btn  -->
                                         <a href="{% url 'savings:delete-goal' goal.id %}">
-                                            <button id="delete-btn"  onclick="return confirm('Are you sure you want to delete this savings goal?') ? window.location.href='{% url 'savings:home' %}' : false;" class="btn btn-secondary">🗑️</button>
+                                            <button id="delete-btn"  onclick="return confirm('Are you sure you want to DELETE this savings goal?') ? window.location.href='{% url 'savings:home' %}' : false;" class="btn btn-secondary">🗑️</button>
                                         </a>
                                     </div>
                                 </td>     
@@ -75,7 +75,7 @@
                             <h5 style="display: inline;">{{ account.amount }}</h5>
                         </td>
                         <td class="center-btn">
-                            <a href="{% url 'savings:delete-account' account.id %}" > <button id="delete-btn" class="btn btn-secondary" onclick="return confirm('Are you sure you want to delete this account?') ? window.location.href='{% url 'savings:home' %}' : false;">🗑️</button></a>
+                            <a href="{% url 'savings:delete-account' account.id %}" > <button id="delete-btn" class="btn btn-secondary" onclick="return confirm('Are you sure you want to DELETE this account?') ? window.location.href='{% url 'savings:home' %}' : false;">🗑️</button></a>
                         </td>
                     </tr>
                 {% endfor %}
