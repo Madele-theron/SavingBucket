@@ -74,7 +74,6 @@ def debit_balance(sender, instance, **kwargs):
 @receiver(post_save, sender=Goal)
 def credit_balance(sender, instance, **kwargs):
     if instance.status == "completed":
-        print("this works")
         balance = instance.account
         balance.amount -= instance.cost
         balance.save()
