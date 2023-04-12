@@ -40,7 +40,6 @@ class Goal(models.Model):
     def is_unlocked(self):
         return self.account.amount >= self.cost
 
-    # Once goal has been completed the cost will be subtracted from the savings account
     def save(self, *args, **kwargs):
         if self.status == "completed":
             pass
